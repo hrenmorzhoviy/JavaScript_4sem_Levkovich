@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор BMSTU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="https://bmstu.ru/" target="_blank" rel="noopener noreferrer">
+            <img src="logo_bmstu_1.png" alt="BMSTU" class="logo-image">
+        </a>
+    </div>
+
+    <div class="calculator">
+        <div class="top-row">
+            <div class="calculator-logo">
+                <img src="logo_bmstu_1.png" alt="BMSTU logo" class="calc-logo-image">
+            </div>
+            <div class="history-container">
+                <button class="history-toggle" id="historyToggle">📜</button>
+                <div class="history-panel hidden" id="historyPanel">
+                    <div class="history-title">История</div>
+                    <div class="history-list" id="historyList"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Редактируемое поле ввода -->
+        <input type="text" id="result" class="result" value="0" inputmode="numeric">
+
+        <!-- Кнопки калькулятора -->
+        <div class="buttons">
+            <!-- Ряд 1: память -->
+            <div class="row">
+                <button id="btn_mc" class="my-btn memory">MC</button>
+                <button id="btn_mr" class="my-btn memory">MR</button>
+                <button id="btn_mplus" class="my-btn memory">M+</button>
+                <button id="btn_mminus" class="my-btn memory">M-</button>
+            </div>
+            <!-- Ряд 2: дополнительные функции -->
+            <div class="row">
+                <button id="btn_sqrt" class="my-btn function">√</button>
+                <button id="btn_square" class="my-btn function">x²</button>
+                <button id="btn_factorial" class="my-btn function">x!</button>
+                <button id="btn_000" class="my-btn function">000</button>
+                <button id="btn_backspace" class="my-btn function">⌫</button>
+            </div>
+            <!-- Ряд 3: очистка и основные операции -->
+            <div class="row">
+                <button id="btn_op_clear" class="my-btn secondary">C</button>
+                <button id="btn_op_sign" class="my-btn secondary">+/-</button>
+                <button id="btn_op_percent" class="my-btn secondary">%</button>
+                <button id="btn_op_div" class="my-btn primary">/</button>
+            </div>
+            <!-- Ряд 4: цифры 7-8-9 и умножение -->
+            <div class="row">
+                <button id="btn_digit_7" class="my-btn">7</button>
+                <button id="btn_digit_8" class="my-btn">8</button>
+                <button id="btn_digit_9" class="my-btn">9</button>
+                <button id="btn_op_mult" class="my-btn primary">x</button>
+            </div>
+            <!-- Ряд 5: цифры 4-5-6 и вычитание -->
+            <div class="row">
+                <button id="btn_digit_4" class="my-btn">4</button>
+                <button id="btn_digit_5" class="my-btn">5</button>
+                <button id="btn_digit_6" class="my-btn">6</button>
+                <button id="btn_op_minus" class="my-btn primary">-</button>
+            </div>
+            <!-- Ряд 6: цифры 1-2-3 и сложение -->
+            <div class="row">
+                <button id="btn_digit_1" class="my-btn">1</button>
+                <button id="btn_digit_2" class="my-btn">2</button>
+                <button id="btn_digit_3" class="my-btn">3</button>
+                <button id="btn_op_plus" class="my-btn primary">+</button>
+            </div>
+            <!-- Ряд 7: 0, точка, равно (широкая) -->
+            <div class="row">
+                <button id="btn_digit_0" class="my-btn">0</button>
+                <button id="btn_digit_dot" class="my-btn">.</button>
+                <button id="btn_op_equal" class="my-btn primary execute">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
