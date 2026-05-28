@@ -1,0 +1,59 @@
+export class ProductCardComponent {
+    constructor(parent) {
+        this.parent = parent;
+    }
+
+    render(item, onClickCallback = null) {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <h3>${this.escapeHtml(item.fullName)}</h3>
+            <p><strong>Специальность:</strong> ${this.escapeHtml(item.specialty)}</p>
+            <p><strong>Средний балл:</strong> <span class="score">${this.calcAverage(item.examScores)}</span></p>
+            <div class="badge">Статус: ${item.status || 'на рассмотрении'}</div>
+        `;
+        if (onClickCallback) {
+            card.addEventListener('click', () => onClickCallback(item.id));
+        }
+        this.parent.appendChild(card);
+    }
+
+    renderDetail(item, onDeleteCallback, onEditCallback) {
+        const detailDiv = document.createElement('div');
+        detailDiv.className = 'detail-card';
+        detailDiv.innerHTML = `
+            <h2>${this.escapeHtml(item.fullName)}</h2>
+            <p><strong>Специальность:</strong> ${this.escapeHtml(item.specialty)}</p>
+            <p><strong>Статус:</strong> ${item.status || 'на рассмотрении'}</p>
+            <hr>
+            <h4>Результаты экзаменов:</h4>
+            <ul>
+                <li>Математика: ${item.examScores.math}</li>
+                <li>Физика: ${item.examScores.physics}</li>
+                <li>Русский язык: ${item.examScores.russian}</li>
+            </ul>
+            <p><strong>Средний балл:</strong> <span class="score">${this.calcAverage(item.examScores)}</span></p>
+            <button id="editBtn" style="background: #ffc107; color: #333; margin-right: 10px;">✏️ Редактировать</button>
+            <button id="deleteBtn">🗑️ Удалить</button>
+        `;
+        this.parent.appendChild(detailDiv);
+
+        detailDiv.querySelector('#deleteBtn').addEventListener('click', () => onDeleteCallback(item.id));
+        detailDiv.querySelector('#editBtn').addEventListener('click', () => onEditCallback());
+    }
+
+    calcAverage(scores) {
+        const sum = scores.math + scores.physics + scores.russian;
+        return (sum / 3).toFixed(1);
+    }
+
+    escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        });
+    }
+}

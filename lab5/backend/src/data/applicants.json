@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "fullName": "Иванов Иван Иванович",
+    "specialty": "Информатика и вычислительная техника",
+    "examScores": {
+      "math": 95,
+      "physics": 88,
+      "russian": 82
+    },
+    "status": "на рассмотрении"
+  },
+  {
+    "id": 2,
+    "fullName": "Петрова Анна Сергеевна",
+    "specialty": "Прикладная математика",
+    "examScores": {
+      "math": 98,
+      "physics": 91,
+      "russian": 87
+    },
+    "status": "зачислен"
+  },
+  {
+    "id": 3,
+    "fullName": "Сидоров Алексей Дмитриевич",
+    "specialty": "Робототехника",
+    "examScores": {
+      "math": 76,
+      "physics": 72,
+      "russian": 80
+    },
+    "status": "отказ"
+  },
+  {
+    "id": 4,
+    "fullName": "Кузнецова Елена Павловна",
+    "specialty": "Программная инженерия",
+    "examScores": {
+      "math": 92,
+      "physics": 87,
+      "russian": 94
+    },
+    "status": "на рассмотрении"
+  },
+  {
+    "id": 5,
+    "fullName": "Сидоров Петр Владимирович",
+    "specialty": "Робототехника",
+    "examScores": {
+      "math": 52,
+      "physics": 67,
+      "russian": 42
+    },
+    "status": "отказ + позор"
+  },
+  {
+    "id": 6,
+    "fullName": "Андреев Николай Петрович",
+    "specialty": "Физику",
+    "examScores": {
+      "math": 88,
+      "physics": 85,
+      "russian": 91
+    },
+    "status": "на рассмотрении"
+  }
+]

@@ -1,0 +1,2 @@
+export class ApplicantUrls { constructor() { this.baseUrl = 'http://localhost:3000'; } getApplicants() { return `${this.baseUrl}/applicants`; } getApplicantById(id) { return `${this.baseUrl}/applicants/${id}`; } createApplicant() { return `${this.baseUrl}/applicants`; } updateApplicant(id) { return `${this.baseUrl}/applicants/${id}`; } deleteApplicant(id) { return `${this.baseUrl}/applicants/${id}`; } }
+export const applicantUrls = new ApplicantUrls();

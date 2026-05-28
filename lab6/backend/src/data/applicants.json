@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "fullName": "Иванов Иван Иванович",
+    "specialty": "Информатика и вычислительная техника",
+    "examScores": { "math": 95, "physics": 88, "russian": 82 },
+    "status": "на рассмотрении"
+  },
+  {
+    "id": 2,
+    "fullName": "Петрова Анна Сергеевна",
+    "specialty": "Прикладная математика",
+    "examScores": { "math": 98, "physics": 91, "russian": 87 },
+    "status": "зачислен"
+  },
+  {
+    "id": 3,
+    "fullName": "Сидоров Алексей Дмитриевич",
+    "specialty": "Робототехника",
+    "examScores": { "math": 76, "physics": 72, "russian": 80 },
+    "status": "отказ"
+  }
+]

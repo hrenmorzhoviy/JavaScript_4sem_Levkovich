@@ -1,0 +1,35 @@
+[
+  {
+    "id": 2,
+    "fullName": "Петрова Анна Сергеевна",
+    "specialty": "Прикладная математика",
+    "examScores": {
+      "math": 98,
+      "physics": 91,
+      "russian": 87
+    },
+    "status": "зачислен"
+  },
+  {
+    "id": 3,
+    "fullName": "Кузнецова Елена Павловна",
+    "specialty": "Программная инженерия",
+    "examScores": {
+      "math": 92,
+      "physics": 87,
+      "russian": 94
+    },
+    "status": "на рассмотрении"
+  },
+  {
+    "id": 4,
+    "fullName": "Андреев Николай Петрович",
+    "specialty": "Физику",
+    "examScores": {
+      "math": 88,
+      "physics": 85,
+      "russian": 91
+    },
+    "status": "на рассмотрении"
+  }
+]
